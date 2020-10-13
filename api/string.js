@@ -8,7 +8,7 @@ const router = express.Router();
 // @access   Public 
 router.get('/', (req, res) => {
     res.send({
-        "message" : "Successful request from /api/profile"
+        "message" : "Successful request from /api/string"
     })
 })
 
@@ -16,18 +16,16 @@ router.get('/', (req, res) => {
 // @desc     Processes JSON test data
 // @access   Public 
 router.post('/', (req, res) => {
-    const user = req.body.username;
-    const email = req.body.email;
-    const phone = req.body.phone;
+    const str = req.body.string;
 
-    if(user && email && phone) {
+    if(str) {
         res.send({
-            "message" : "user: " + user + " has email: " + email + " and phone #: " + phone
+            "message" : "Here is your string: " + str
         });
     }
     else{
         res.send({
-            "message" : "error, please send user, email, and phone in JSON format"
+            "message" : "error, please send a string in JSON format"
         })
     }
 });

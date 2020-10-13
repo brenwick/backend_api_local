@@ -18,10 +18,9 @@ app.listen(process.env.PORT || port, function(){
 });
 
 app.get('/', (req, res) => {
-    res.send({
-        message: 'backend server online.'
-    })
+    res.sendFile(__dirname + '/index.html');
 });
 
 
 app.use('/api/profile', require('./api/profile'));
+app.use('/api/string', require('./api/string'));

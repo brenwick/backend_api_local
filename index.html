@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScreenLimit Backend API</title>
+</head>
+<body style="margin: 1rem;">
+    <h1>Welcome to the backend API</h1>
+    <p>Each route expects a certain JSON input and will deliver a JSON output.  To test them, please append the route name to the end of the URL.</p>
+    <p style="padding-bottom: 4rem;"><strong>Example:</strong> https://screenlimit-backend-api.herokuapp.com/api/profile</p>
+
+    <!-- API/PROFILE -->
+    <h2>/api/profile</h2>
+    <p><strong>Sample Input: </strong></p>
+    <p>{"username" : "Brandon", "email" : "brandon@gmail.com", "phone" : "123-456-7890"}
+    </p>
+    <p><strong>Sample Output: </strong></p>
+    <p style="padding-bottom: 4rem;">{"message" : "user: Brandon has email: brandon@gmail.com and phone #: 123-456-7890"}</p>
+
+    <!-- API/STRING -->
+    <h2>/api/string</h2>
+    <p><strong>Sample Input: </strong></p>
+    <p>{"string" : "helloworld"}
+    </p>
+    <p><strong>Sample Output: </strong></p>
+    <p style="padding-bottom: 4rem;">{"message" : "Here is your string: helloworld"</p>
+    
+    
+</body>
+</html>
