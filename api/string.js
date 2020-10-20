@@ -7,6 +7,14 @@ const router = express.Router();
 // @desc     Test route
 // @access   Public 
 router.get('/', (req, res) => {
+    console.log('\n-----Headers-----\n');
+    console.log(req.headers);
+    console.log('\n------Body-------\n');
+    console.log(req.body);
+    console.log('\n------Status-----\n');
+    console.log(res.statusCode);
+
+    
     res.send({
         "message" : "Successful request from /api/string"
     })
@@ -16,6 +24,14 @@ router.get('/', (req, res) => {
 // @desc     Processes JSON test data
 // @access   Public 
 router.post('/', (req, res) => {
+    
+    console.log('\n-----Headers-----\n');
+    console.log(req.headers);
+    console.log('\n------Body-------\n');
+    console.log(req.body);
+    console.log('\n------Status-----\n');
+    console.log(res.statusCode);
+
     const str = req.body.string;
 
     if(str) {
